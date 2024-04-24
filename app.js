@@ -14,7 +14,7 @@ app.use((req, res, next) => {
     }
 
     next();
-    //res.end("<h1>" + userName + "</h1>");
+    //res.end("<h1> User =" + userName + "</h1>");
   });
   req.on("data", (chunk) => {
     body += chunk;
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   if (req.body) {
     console.log(5);
-    return res.send("<h1>" + req.body.name + "</h1>");
+    return res.send("<h1> User =" + req.body.name + "</h1>");
   }
   console.log(3);
   res.send(
