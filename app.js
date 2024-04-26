@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoPractice = require("./mongo");
+const mongoPractice = require("./mongoose");
 
 const app = express();
 
@@ -10,4 +10,4 @@ app.post("/products", mongoPractice.createProduct);
 
 app.get("/products", mongoPractice.getProducts);
 
-app.listen(5001);
+app.listen(process.env.PORT || 5001);
